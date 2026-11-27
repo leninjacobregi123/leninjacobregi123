@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Lenin's GitHub profile README: plain text, no images.
+"""Build Lenin's GitHub profile README: one banner image (scripts/banner.py), then plain text.
 
     python3 -I scripts/build_readme.py            # rebuild the whole README from the content below
     python3 -I scripts/build_readme.py --refresh  # only rewrite the "Latest from RecChaos" list (the daily Action)
@@ -25,8 +25,10 @@ START, END = "<!-- recent starts -->", "<!-- recent ends -->"
 RECENT_N = 5
 
 # ============================================================== content (edit here)
-NAME = "Lenin Jacob Regi"
-INTRO = ("Recommender systems engineer. I build retrieval and ranking systems and keep them healthy in production. "
+# The banner (drawn by scripts/banner.py) carries the name, title and focus areas, so the text starts after them.
+BANNER = ('<a href="https://leninjacobregi.me"><img src="./assets/banner.svg" width="100%" '
+          'alt="Lenin Jacob Regi, Recommender Systems Engineer: retrieval, ranking, RecSysOps, cold start."></a>')
+INTRO = ("I build retrieval and ranking systems and keep them healthy in production. "
          "Final-year B.Tech CSE (AI/ML) at Karunya, graduating 2027, where I lead the Generative AI community "
          "at Karunya Innovation & Design Studio.")
 NOW = (f"Building [RecChaos]({GH}/RecChaos) in public: a fault-injection benchmark for recommender systems. "
@@ -98,7 +100,7 @@ def build(lines: list[str]) -> str:
     work += [f"| [{name}]({link}) | {what} | {stack} |" for name, link, what, stack in WORK]
     links = " · ".join(f"[{text}]({href})" for text, href in LINKS)
     return "\n".join([
-        f"# {NAME}", "", INTRO, "",
+        BANNER, "", INTRO, "",
         "### Now", "", NOW, "",
         "### Selected work", "", *work, "",
         "### Latest from RecChaos", "", block(lines), "",

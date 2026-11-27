@@ -1,6 +1,6 @@
-# Lenin Jacob Regi
+<a href="https://leninjacobregi.me"><img src="./assets/banner.svg" width="100%" alt="Lenin Jacob Regi, Recommender Systems Engineer: retrieval, ranking, RecSysOps, cold start."></a>
 
-Recommender systems engineer. I build retrieval and ranking systems and keep them healthy in production. Final-year B.Tech CSE (AI/ML) at Karunya, graduating 2027, where I lead the Generative AI community at Karunya Innovation & Design Studio.
+I build retrieval and ranking systems and keep them healthy in production. Final-year B.Tech CSE (AI/ML) at Karunya, graduating 2027, where I lead the Generative AI community at Karunya Innovation & Design Studio.
 
 ### Now
 
