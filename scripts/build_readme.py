@@ -28,13 +28,22 @@ RECENT_N = 5
 # The banner (drawn by scripts/banner.py) carries the name, title and focus areas, so the text starts after them.
 BANNER = ('<a href="https://leninjacobregi.me"><img src="./assets/banner.svg" width="100%" '
           'alt="Lenin Jacob Regi, Recommender Systems Engineer: retrieval, ranking, RecSysOps, cold start."></a>')
-INTRO = ("I build retrieval and ranking systems and keep them healthy in production. "
-         "Final-year B.Tech CSE (AI/ML) at Karunya, graduating 2027, where I lead the Generative AI community "
-         "at Karunya Innovation & Design Studio.")
-NOW = (f"Building [RecChaos]({GH}/RecChaos) in public: a fault-injection benchmark for recommender systems. "
-       "I rebuild six landmark recommender papers into one stack, then break it on purpose to measure which "
-       "monitors notice. Week 1: Amazon's 2003 item-to-item CF scored about 6× all-time popularity on NDCG@10, "
-       f"then lost to a 30-day popularity list ([EXP-001]({DOCS}experiments/exp-001-week1-baselines/)).")
+# Bio: the identity first, then the proof. Every point is public and checked (28 Nov 2026).
+BIO = ("**I'm a recommender systems engineer.** I build retrieval and ranking systems and keep them healthy "
+       "in production. My niche is RecSysOps and cold start.")
+BIO_POINTS = [
+    ("Now", f"building [RecChaos]({GH}/RecChaos) in public, a fault-injection benchmark for recommender systems "
+            "built from six landmark papers. Week 1: Amazon's item-to-item CF beat all-time popularity about 6×, "
+            f"then lost to a 30-day popularity list ([EXP-001]({DOCS}experiments/exp-001-week1-baselines/))."),
+    ("Recognition", "Smart India Hackathon Grand Finalist."),
+    ("Leadership", "I lead the Generative AI community at Karunya Innovation & Design Studio: "
+                   "100+ engineers and hackathon teams."),
+    ("Open source", "4 merged pull requests to [curelex-public-hms](https://github.com/arnvj220/curelex-public-hms), "
+                    "a hospital management system (auth, payroll, telemedicine fees). Extended EleutherAI's "
+                    f"lm-evaluation-harness [in my fork]({GH}/lm-evaluation-harness) with a web dashboard and "
+                    "fixes for Ollama models."),
+    ("Education", "B.Tech CSE (AI/ML), Karunya Institute of Technology and Sciences, graduating 2027."),
+]
 WORK = [  # (name, link, what it is, built with)
     ("RecChaos", f"{GH}/RecChaos",
      "Fault-injection benchmark and RecSysOps stack for recommender systems", "Python · SciPy · pandas"),
@@ -99,9 +108,9 @@ def build(lines: list[str]) -> str:
     work = ["| Project | What it is | Built with |", "| :--- | :--- | :--- |"]
     work += [f"| [{name}]({link}) | {what} | {stack} |" for name, link, what, stack in WORK]
     links = " · ".join(f"[{text}]({href})" for text, href in LINKS)
+    points = [f"- **{label}:** {text}" for label, text in BIO_POINTS]
     return "\n".join([
-        BANNER, "", INTRO, "",
-        "### Now", "", NOW, "",
+        BANNER, "", BIO, "", *points, "",
         "### Selected work", "", *work, "",
         "### Latest from RecChaos", "", block(lines), "",
         f"{AVAILABILITY}  ", links, "",

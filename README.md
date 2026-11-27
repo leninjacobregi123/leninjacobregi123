@@ -1,10 +1,12 @@
 <a href="https://leninjacobregi.me"><img src="./assets/banner.svg" width="100%" alt="Lenin Jacob Regi, Recommender Systems Engineer: retrieval, ranking, RecSysOps, cold start."></a>
 
-I build retrieval and ranking systems and keep them healthy in production. Final-year B.Tech CSE (AI/ML) at Karunya, graduating 2027, where I lead the Generative AI community at Karunya Innovation & Design Studio.
+**I'm a recommender systems engineer.** I build retrieval and ranking systems and keep them healthy in production. My niche is RecSysOps and cold start.
 
-### Now
-
-Building [RecChaos](https://github.com/leninjacobregi123/RecChaos) in public: a fault-injection benchmark for recommender systems. I rebuild six landmark recommender papers into one stack, then break it on purpose to measure which monitors notice. Week 1: Amazon's 2003 item-to-item CF scored about 6× all-time popularity on NDCG@10, then lost to a 30-day popularity list ([EXP-001](https://leninjacobregi.me/RecChaos/experiments/exp-001-week1-baselines/)).
+- **Now:** building [RecChaos](https://github.com/leninjacobregi123/RecChaos) in public, a fault-injection benchmark for recommender systems built from six landmark papers. Week 1: Amazon's item-to-item CF beat all-time popularity about 6×, then lost to a 30-day popularity list ([EXP-001](https://leninjacobregi.me/RecChaos/experiments/exp-001-week1-baselines/)).
+- **Recognition:** Smart India Hackathon Grand Finalist.
+- **Leadership:** I lead the Generative AI community at Karunya Innovation & Design Studio: 100+ engineers and hackathon teams.
+- **Open source:** 4 merged pull requests to [curelex-public-hms](https://github.com/arnvj220/curelex-public-hms), a hospital management system (auth, payroll, telemedicine fees). Extended EleutherAI's lm-evaluation-harness [in my fork](https://github.com/leninjacobregi123/lm-evaluation-harness) with a web dashboard and fixes for Ollama models.
+- **Education:** B.Tech CSE (AI/ML), Karunya Institute of Technology and Sciences, graduating 2027.
 
 ### Selected work
 
