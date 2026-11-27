@@ -27,7 +27,8 @@ RECENT_N = 5
 # ============================================================== content (edit here)
 # The banner (drawn by scripts/banner.py) carries the name, title and focus areas, so the text starts after them.
 BANNER = ('<a href="https://leninjacobregi.me"><img src="./assets/banner.svg" width="100%" '
-          'alt="Lenin Jacob Regi, Recommender Systems Engineer: retrieval, ranking, RecSysOps, cold start."></a>')
+          'alt="Lenin Jacob Regi, Recommender Systems Engineer: retrieval, ranking, RecSysOps, cold start, '
+          'generative recommendation."></a>')
 # Bio: the identity first, then the proof. Every point is public and checked (28 Nov 2026).
 BIO = ("**I'm a recommender systems engineer.** I build retrieval and ranking systems and keep them healthy "
        "in production. My niche is RecSysOps and cold start.")
@@ -35,6 +36,10 @@ BIO_POINTS = [
     ("Now", f"building [RecChaos]({GH}/RecChaos) in public, a fault-injection benchmark for recommender systems "
             "built from six landmark papers. Week 1: Amazon's item-to-item CF beat all-time popularity about 6×, "
             f"then lost to a 30-day popularity list ([EXP-001]({DOCS}experiments/exp-001-week1-baselines/))."),
+    # Thesis code (FRESCO) is private: describe the topic only, no numbers or link, until Lenin makes it public.
+    ("Research", "my thesis is on generative recommendation for cold-start and fresh items: semantic IDs and a "
+                 "decoder-only recommender that can rank items with no interaction history. Work in progress; "
+                 "the code isn't public yet."),
     ("Recognition", "Smart India Hackathon Grand Finalist."),
     ("Leadership", "I lead the Generative AI community at Karunya Innovation & Design Studio: "
                    "100+ engineers and hackathon teams."),

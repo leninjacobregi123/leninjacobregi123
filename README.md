@@ -1,8 +1,9 @@
-<a href="https://leninjacobregi.me"><img src="./assets/banner.svg" width="100%" alt="Lenin Jacob Regi, Recommender Systems Engineer: retrieval, ranking, RecSysOps, cold start."></a>
+<a href="https://leninjacobregi.me"><img src="./assets/banner.svg" width="100%" alt="Lenin Jacob Regi, Recommender Systems Engineer: retrieval, ranking, RecSysOps, cold start, generative recommendation."></a>
 
 **I'm a recommender systems engineer.** I build retrieval and ranking systems and keep them healthy in production. My niche is RecSysOps and cold start.
 
 - **Now:** building [RecChaos](https://github.com/leninjacobregi123/RecChaos) in public, a fault-injection benchmark for recommender systems built from six landmark papers. Week 1: Amazon's item-to-item CF beat all-time popularity about 6×, then lost to a 30-day popularity list ([EXP-001](https://leninjacobregi.me/RecChaos/experiments/exp-001-week1-baselines/)).
+- **Research:** my thesis is on generative recommendation for cold-start and fresh items: semantic IDs and a decoder-only recommender that can rank items with no interaction history. Work in progress; the code isn't public yet.
 - **Recognition:** Smart India Hackathon Grand Finalist.
 - **Leadership:** I lead the Generative AI community at Karunya Innovation & Design Studio: 100+ engineers and hackathon teams.
 - **Open source:** 4 merged pull requests to [curelex-public-hms](https://github.com/arnvj220/curelex-public-hms), a hospital management system (auth, payroll, telemedicine fees). Extended EleutherAI's lm-evaluation-harness [in my fork](https://github.com/leninjacobregi123/lm-evaluation-harness) with a web dashboard and fixes for Ollama models.

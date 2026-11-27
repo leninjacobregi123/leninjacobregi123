@@ -18,7 +18,8 @@ OUT = pathlib.Path(__file__).resolve().parent.parent / "assets" / "banner.svg"
 # ============================================================== content (edit here)
 NAME = "Lenin Jacob Regi"
 TITLE = "Recommender Systems Engineer"
-FOCUS = ["RETRIEVAL", "RANKING", "RECSYSOPS", "COLD START"]
+FOCUS = [["RETRIEVAL", "RANKING", "RECSYSOPS"],          # two lines, as in the LinkedIn headline:
+         ["COLD START", "GENERATIVE RECOMMENDATION"]]   # "Retrieval, Ranking & RecSysOps | Cold-Start & Generative"
 
 # ============================================================== style
 W, H = 1200, 220
@@ -159,16 +160,16 @@ def banner():
     g.append(f'<rect width="760" height="{H}" fill="url(#shade)"/>')
     # bio
     dot = f'<tspan fill="{SKY}"> · </tspan>'
-    focus = dot.join(escape(f) for f in FOCUS)
-    # sizes are set for GitHub, which shows the 1200-wide banner at about 830 px (so 16 here reads as about 11)
-    rule = max(width(NAME, 48, ls=0.5), width(" · ".join(FOCUS), 16, MONO, 1.6))
-    g.append(text(62, 82, NAME, 48, "#F8FAFC", 300, ls=0.5))
-    g.append(f'<line x1="64" y1="106" x2="{64 + rule:.0f}" y2="106" stroke="#F8FAFC" stroke-opacity=".28"/>')
-    g.append(text(64, 142, TITLE, 22, "#E2E8F0", 600))
-    g.append(text(64, 172, focus, 16, "#A5B4C8", 500, MONO, 1.6, raw=True))
+    # sizes are set for GitHub, which shows the 1200-wide banner at about 845 px (so 16 here reads as about 11)
+    rule = max([width(NAME, 48, ls=0.5)] + [width(" · ".join(line), 16, MONO, 1.6) for line in FOCUS])
+    g.append(text(62, 76, NAME, 48, "#F8FAFC", 300, ls=0.5))
+    g.append(f'<line x1="64" y1="99" x2="{64 + rule:.0f}" y2="99" stroke="#F8FAFC" stroke-opacity=".28"/>')
+    g.append(text(64, 133, TITLE, 22, "#E2E8F0", 600))
+    for i, line in enumerate(FOCUS):
+        g.append(text(64, 160 + 23 * i, dot.join(escape(f) for f in line), 16, "#A5B4C8", 500, MONO, 1.6, raw=True))
     body = defs + f'<g clip-path="url(#clip)">{"".join(g)}</g>' + \
         f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="16" fill="none" stroke="#263041"/>'
-    label = f"{NAME}, {TITLE}: " + ", ".join(f.lower() for f in FOCUS) + "."
+    label = f"{NAME}, {TITLE}: " + ", ".join(f.lower() for line in FOCUS for f in line) + "."
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
             f'role="img" aria-label="{escape(label)}">{body}</svg>\n')
 
