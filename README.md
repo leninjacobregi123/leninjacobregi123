@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/lenin-jacob-regi"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/about-dark.svg"><img src="./assets/about-light.svg" width="58.6%" alt="About me: I'm a recommender systems engineer. I build retrieval and ranking systems and keep them healthy in production. My niche is RecSysOps and cold start. Smart India Hackathon 2025 Grand Finalist. B.Tech CSE (AI/ML), Karunya, 2027. Generative AI community lead at KIDS. Open to internships."></picture></a>
-  <a href="https://github.com/leninjacobregi123?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/stats-dark.svg"><img src="./assets/stats-light.svg" width="40.4%" alt="GitHub stats, refreshed daily"></picture></a>
+  <a href="https://github.com/leninjacobregi123?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/stats-dark.svg"><img src="./assets/stats-light.svg" width="40.4%" alt="GitHub stats: contributions in the last year, public repositories, followers and following"></picture></a>
 </p>
 
 <p align="center">

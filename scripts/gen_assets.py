@@ -294,7 +294,7 @@ def stats(t, s):
     for i, hh in enumerate([9, 15, 21]):
         b.append(f'<rect x="{32 + i*7}" y="{47 - hh}" width="4.5" height="{hh}" rx="1.5" fill="{SKY}"/>')
     b.append(text(62, 47, "GitHub stats", 22, t["text"], 700))
-    b.append(text(W - 32, 45, "LIVE · " + s["date"], 11, t["muted"], 600, MONO, "end", 1))
+    b.append(text(W - 32, 45, "AS OF " + s["date"], 11, t["muted"], 600, MONO, "end", 1))
     b.append(text(W / 2, 104, f'{s["total"]:,}', 44, t["text"], 800, anchor="middle"))
     b.append(text(W / 2, 128, "contributions in the last year", 14, t["muted"], anchor="middle"))
     weeks = s["weeks"][-26:]
